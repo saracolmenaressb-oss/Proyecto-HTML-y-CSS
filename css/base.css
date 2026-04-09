@@ -1,0 +1,11 @@
+body{
+    background: rgb(220, 229, 245);
+    text-align: center;
+}
+h1{
+    font-family: fantasy;
+    color: darkslateblue;
+}
+header{
+    background-color: lightblue;
+}
