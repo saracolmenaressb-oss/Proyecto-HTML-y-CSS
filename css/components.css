@@ -4,31 +4,80 @@
     box-sizing: border-box;
 }
 body{
-    background: beige;
+    background: rgb(243, 240, 248);
 }
 .catalogo{
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 1.5rem;
     align-items: stretch;
 }
 
 .card img {
-    width: 80%;
+    width: 150px;
+    height: 200px;
     border-radius: 30px;
+    display: block;
+    margin: 0 auto;
 }
 .card{
     position: relative;
-    width: 18rem;
     background: white;
     display: flex;
-    padding: 1.5rem;
+    padding: 10px;
+    width: 200px;
+    height: 350px;
     border-radius: 1rem;
-    flex-direction: column;
+    border: 1px solid darkslateblue;
+    flex-direction:column;
     gap: 1rem;
-    opacity: 0.95;
+}
+.card h2{
+    font-family: cursive;
+    font-size: 17px;
+    color: darkslateblue;
+}
+h2, p{
+    margin: -5px 0;
+}
+.card p{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    font-size: 15px;
+    line-height: 1;
+    text-transform: initial;
 }
 .contenedor{
     width: 90%;
     margin: 6rem auto 2rem;
+}
+.etiqueta{
+    position: absolute;
+    top: 5px;
+    right: 2px;
+    background: slateblue;
+    font-size: 19px;
+    border: 1px solid slateblue;
+    border-radius: 30px;
+    padding: 3px;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+}
+h3{
+    font-style: italic;
+    color: cornflowerblue;
+    font-size: 14px;
+    line-height: 1;
+}
+button{
+    background: rgb(163, 150, 248);
+    border: 1px;
+    border-radius: 20px;
+    height: 40px;
+    width: 95px;
+}
+button:hover{
+    background: rgb(75, 50, 241);
 }
