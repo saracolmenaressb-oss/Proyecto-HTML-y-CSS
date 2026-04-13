@@ -3,9 +3,8 @@ body{
 }
 .catalogo{
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    align-items: stretch;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .card img {
@@ -13,21 +12,30 @@ body{
     height: 160px;
     border-radius: 30px;
     margin: 0 auto;
+    /* evita que la imagen se deforme */
+    object-fit: cover;
 }
 .card{
     position: relative;
     background: rgb(176, 186, 243);
     display: flex;
+    flex-direction:column;
     padding: 10px;
-    width: 200px;
-    height: 350px;
-    border-radius: 1rem;
+    width: 220px;
+    min-height: 400px;
     border: 1px solid darkslateblue;
     border-radius: 30px;
-    flex-direction:column;
-    gap: 1rem;
+    transition: transsform 0.4s ease;
     margin: 0 auto;
     box-shadow: 5px 5px 5px rgb(182, 177, 177);
+}
+.categoria {
+    display: flex;
+    flex-direction: column; /* Título arriba, tarjetas abajo */
+    gap: 1rem;
+}
+.card:hover{
+    transsform: translateY(-5px);
 }
 .card h2{
     font-family: cursive;
@@ -37,6 +45,14 @@ body{
 h2, p{
     margin: -5px 0;
 }
+.categoria h2 {
+    font-family: 'Arial', cursive;
+    font-size: 24px;
+    color: darkslateblue;
+    border-bottom: 2px solid slateblue;
+    padding-bottom: 5px;
+    width: fit-content;
+}
 .card p{
     display: flex;
     flex-wrap: wrap;
@@ -44,6 +60,13 @@ h2, p{
     font-size: 15px;
     line-height: 1;
     text-transform: initial;
+}
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas bajen si no hay espacio */
+    flex-direction: row; /* Asegura que vayan de izquierda a derecha */
+    gap: 1.5rem;
+    justify-content: flex-start; /* Alineadas al inicio */
 }
 .contenedor{
     width: 90%;
@@ -55,6 +78,8 @@ h2, p{
     right: 2px;
     background: slateblue;
     font-size: 19px;
+    font-weight: bold;
+    color: white;
     border: 1px solid slateblue;
     border-radius: 30px;
     padding: 3px;
@@ -82,7 +107,7 @@ button:hover{
     background: rgb(144, 150, 241);
     padding: 14px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, sans-serif;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -108,6 +133,8 @@ button:hover{
     position: relative;
     text-align: center;
     border-radius: 30px;
+    background-color: rgb(176, 186, 243);
+    border: 1px solid darkslateblue;
 }
 .destacado img{
     width: 140px;
@@ -127,13 +154,13 @@ button:hover{
 }
 .buscar img{
     width: 14px;
-    height: 14px;
+    height: 15px;
 }
 .buscar{
     height: 30px;
 }
 .buscador input{
-    width: 800px;
+    width: 100rem;
     border: 2px;
     height: 30px;
     border-radius: 30px;
@@ -144,6 +171,7 @@ button:hover{
 .titulo{
     text-align: center;
     color: darkslateblue;
+    padding: 30px;
 }
 #piePagina{
     text-align: center;
@@ -155,23 +183,55 @@ button:hover{
     width: 30px;
     height: 30px;
 }
-.carro{
+
+.carrito{
     width: 700px;
     height: 240px;
     background:rgb(176, 186, 243);
     box-shadow: 5px 5px 5px rgb(182, 177, 177);
+    flex-direction: column;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    margin: 0 auto;
+    margin: 10px;
     gap: 1rem;
     padding: 15px;
     border-radius: 30px;
     border: 1px solid darkslateblue;
-
+    position: relative;
+    justify-content: center;
+    align-items: stretch;
 }
-.carro img{
+.carro input{
+    border-radius: 30px;
+    width: 60px;
+    height: 35px;
+    text-align: left;
+    font-size: 16px;
+    border: 1px solid darkslateblue;
+}
+
+.carrito img{
     width: 200px;
     height: 200px;
     border-radius: 30px;
+}
+.vacio{
+    display: flex;                  /* Activamos Flexbox */
+    flex-direction: column;         /* Alineamos los hijos en columna (imagen arriba, texto abajo) */
+    justify-content: center;        /* Centrado vertical */
+    align-items: center;            /* Centrado horizontal */
+    min-height: 80vh;               /* Importante: Que ocupe casi toda la altura de la pantalla */
+    text-align: center;
+}
+
+.carrito-vacio-img {
+    width: 300px;                   /* Ajusta el tamaño a tu gusto */
+    height: 300px;
+    margin-bottom: 20px;            /* Espacio entre imagen y texto */
+}
+
+.mensaje-vacio {
+    font-family: Arial, sans-serif;
+    color: darkslateblue;
+    font-size: 1.2rem;
 }
