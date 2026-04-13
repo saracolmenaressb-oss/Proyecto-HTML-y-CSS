@@ -1,11 +1,20 @@
+:root{
+    --color-fondo: rgb(226, 208, 255);
+}
 body{
-    background: rgb(220, 229, 245);
-    text-align: center;
+    margin: 0;
+    background: var(--color-fondo);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
-h1{
-    font-family: fantasy;
-    color: darkslateblue;
+.encabezado{
+    display: flex;
+    flex-direction: row;
 }
-header{
-    background-color: lightblue;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

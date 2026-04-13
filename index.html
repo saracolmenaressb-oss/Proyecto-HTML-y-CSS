@@ -5,10 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAMPUS SHOP</title>
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <header>
+    <header class="encabezado">
+        <a href="perfil.html"><img src="img/perfil.png" alt=""></a>
         <h1>Campus shop</h1>
+        <a href="carrito.html"><img src="img/carrito de compras.png" alt=""></a>
     </header>
+    <section class="buscador">
+        <form>
+        <input type="text" placeholder="Buscar productos..." />
+        <button class="buscar"><img src="img/lupa.png" alt=""></button>
+        </form>
+    </section>
+    <h2 class="titulo">Categorias</h2>
+    <nav class="menu">
+        <div class="opcion">
+           <a href="catalogo.html"> <img src="img/camisa azul.webp" alt=""></a> 
+           <h3>Camisas</h3>
+        </div>
+        <div class="opcion">
+            <a href="catalogo.html"><img src="img/jeans.webp" alt=""></a>
+            <h3>Jeans</h3>
+        </div>
+        <div class="opcion">
+            <a href="catalogo.html"><img src="img/abrigos.jpg" alt=""></a>
+            <h3>Sacos</h3>
+        </div>
+        <div class="opcion">
+            <a href="catalogo.html"><img src="img/falda de jean.webp" alt=""></a>
+            <h3>Faldas</h3>
+        </div>
+        <div class="opcion">
+            <a href="catalogo.html"><img src="img/tenis.jpg" alt=""></a>
+            <h3>Tennis</h3>
+        </div>
+    </nav>
+    <h2 class="titulo">Productos destacados</h2>
+    <nav class="productosDestacados">
+        <article class="destacado">
+            <img src="img/camisa azul.webp" alt="">
+        </article>
+        <article class="destacado">
+            <img src="img/falda de jean.webp" alt="">
+        </article>
+        <article class="destacado">
+            <img src="img/abrigos.jpg" alt="">
+        </article>
+    </nav>
+
+<footer class="pieDePagina">
+    <div>    
+        <a href="index.html"><img src="img/casa.png" class="icono"> </a>
+        <p>inicio</p>
+    </div> 
+    <div>
+        <img src="img/categoria.png" class="icono">
+        <p>categorias</p>
+    </div>
+    <div>
+        <a href="carrito.html"><img src="img/carrito de compras.png" class="icono"></a>
+        <p>carrito</p>
+    </div>
+    <div>
+        <img src="img/corazo.png" class="icono">
+        <p>favoritos</p>
+    </div>
+    <div>
+        <img src="img/perfil.png" class="icono">
+        <p>perfil</p>
+    </div>        
+</footer>
 </body>
 </html>
