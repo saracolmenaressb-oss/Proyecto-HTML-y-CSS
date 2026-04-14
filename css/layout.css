@@ -20,15 +20,14 @@ main {
     width: 100%;
     background: darkslateblue;
     color: white;
-    text-align: center;
-    padding: 20px;
     display: flex;
-    flex-direction: row;
-    gap: 5rem;
+    justify-content: space-around; /* mejor que gap + margin auto */
+    align-items: center;
+    padding: 10px 0;
     
 }
 .pieDePagina div{
-    margin: 0 auto;
+    justify-content: space-around;
 }
 .encabezado img{
     width: 50px;

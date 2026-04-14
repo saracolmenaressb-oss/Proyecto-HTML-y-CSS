@@ -25,18 +25,20 @@ body{
     min-height: 400px;
     border: 1px solid darkslateblue;
     border-radius: 30px;
-    transition: transsform 0.4s ease;
+    transition: transform 0.3s ease;
     margin: 0 auto;
     box-shadow: 5px 5px 5px rgb(182, 177, 177);
     line-height: 1.0;
+    padding-bottom: 15px; 
 }
 .categoria {
     display: flex;
     flex-direction: column; /* Título arriba, tarjetas abajo */
     gap: 1rem;
+    padding-bottom: 110px; 
 }
 .card:hover{
-    transsform: translateY(-5px);
+    transform: translateY(-5px);
 }
 .card h2{
     font-family: cursive;
@@ -152,7 +154,7 @@ button:hover{
     gap: 1.5rem;
     align-items: stretch;
     border-radius: 30px;
-    margin: 0 auto;
+    justify-content: space-around;
 }
 .buscar img{
     width: 14px;
@@ -185,37 +187,96 @@ button:hover{
     width: 30px;
     height: 30px;
 }
-
-.carrito{
-    width: 700px;
-    height: 240px;
-    background:rgb(176, 186, 243);
-    box-shadow: 5px 5px 5px rgb(182, 177, 177);
-    flex-direction: column;
+.carro{
+    gap: 1.5rem;
     display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
-    gap: 1rem;
+    flex-direction: column;
+    padding-bottom: 120px; 
+}
+.carrito{
+    width: 500px;
+    background: rgb(176, 186, 243);
+    box-shadow: 5px 5px 5px rgb(182, 177, 177);
+    display: flex;
+    gap: 15px; /* controla el espacio ENTRE imagen y texto */
     padding: 15px;
     border-radius: 30px;
     border: 1px solid darkslateblue;
-    position: relative;
-    justify-content: center;
-    align-items: stretch;
+    margin: 10px auto;
+    align-items: center; /* centra verticalmente */
 }
-.carro input{
-    border-radius: 30px;
+.carrito h2::first-letter{
+    text-transform: uppercase;
+    
+}
+.carrito h2{
+    font-size: 16px;
+    color: darkslateblue;
+}
+.carrito .eliminar{
+    width: 40px;
+    height: auto;
+}
+.acciones{
+    display: flex;
+    justify-content: space-between; /* separa input e icono */
+    align-items: center;
+    margin-top: 2px;
+}
+.cantidad{
     width: 60px;
     height: 35px;
-    text-align: left;
-    font-size: 16px;
+    border-radius: 30px;
     border: 1px solid darkslateblue;
 }
-
+.info{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1; /* ocupa el espacio disponible */
+}
 .carrito img{
-    width: 200px;
-    height: 200px;
-    border-radius: 30px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.resumen{
+    background: rgb(144, 150, 241);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.fila{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.total{
+    font-weight: bold;
+    font-size: 16px;
+    border-top: 1px solid darkslateblue;
+    padding-top: 10px;
+}
+.btn-pagar{
+    width: 100%;
+    background: darkslateblue;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.btn-pagar:hover{
+    background: rgb(40, 18, 182);
+    transition: 0.3s;
 }
 .vacio{
     display: flex;                  /* Activamos Flexbox */
@@ -275,7 +336,7 @@ button:hover{
 
 .correo{
     font-size: 14px;
-    color: gray;
+    color: darkslateblue;
 }
 .perfil, .cerrar-secion{
     background: rgb(176, 186, 243);
@@ -295,23 +356,57 @@ button:hover{
     height: 35px;
 }
 .historial{
-    width: 700px;
-    height: 140px;
-    background:rgb(176, 186, 243);
-    box-shadow: 5px 5px 5px rgb(182, 177, 177);
-    flex-direction: column;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
-    gap: 2rem;
+    width: 500px;
+    background: rgb(176, 186, 243);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 15px auto;
     padding: 15px;
-    border-radius: 30px;
-    border: 1px solid darkslateblue;
-    position: relative;
-    justify-content: center;
-    align-items: stretch;
-    margin: 0 auto;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.fila-superior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fila-inferior{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.estado{
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+.detalle{
+    background: #ddd;
+    padding: 6px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.entregado{
+    background: #d4f5e9;
+    color: #1f7a5c;
 }
 .total{
-    top: right;
+    font-weight: bold;
+}
+.referencia{
+    font-size: 13px;
+    color: gray;
+}
+.en-camino{
+    background: #ffe7c7;
+    color: #b26a00;
+}
+.cancelado{
+    background: #ffd6d6;
+    color: #a10000;
+}
+.perfil-seccion a{
+    text-decoration: none;
+    color: inherit;
 }

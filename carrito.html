@@ -18,26 +18,60 @@
     <main class="carro">
         <article class="carrito">
             <img src="img/tenis.jpg">
-            <h2>tennis campus</h2>
-            <p>tennis campus, color rojo con detalles rosa</p>
-            <p>$120.000</p>
-            <input type="number" name="cantidad" class="cantidad">
+            <div class="info">
+                <h2>tennis campus</h2>
+                <p>Tennis campus, color rojo con detalles rosa.</p>
+                <p>$120.000</p>
+                <div class="acciones">
+                    <input type="number" name="cantidad" class="cantidad">
+                    <img src="img/eliminar.png" alt="eliminar" class="eliminar">
+                </div>
+            </div>
         </article>
         <article class="carrito">
             <img src="img/abrigos.jpg">
-            <h2>buso de mujer</h2>
-            <p>buso de mujer, color negro, inspirado en un verano sin ti</p>
-            <p class="precio">$240.000</p>
-            <input type="number" name="cantidad" class="cantidad">
+            <div class="info">
+                <h2>buso de mujer</h2>
+                <p>Buso de mujer, color negro, inspirado en un verano sin ti.</p>
+                <p>$240.000</p>
+                <div class="acciones">
+                    <input type="number" name="cantidad" class="cantidad">
+                    <img src="img/eliminar.png" alt="eliminar" class="eliminar">
+                </div>
+            </div>
         </article>
         <article class="carrito">
             <img src="img/camiseta.webp">
-            <h2>camisa de mujer, blanca</h2>
-            <p>Camisa basica de mujer, color blanco</p>
-            <p>$60.000</p>
-            <input type="number" name="cantidad" class="cantidad">
+            
+            <div class="info">
+                <h2>camisa de mujer, blanca</h2>
+                <p>Camisa basica de mujer, color blanco</p>
+                <p class="precio">$60.000</p>
+        
+                <div class="acciones">
+                    <input type="number" name="cantidad" class="cantidad">
+                    <img src="img/eliminar.png" alt="eliminar" class="eliminar">
+                </div>
+            </div>
         </article>
-
+        <section class="resumen">
+            <div class="fila">
+                <p>Subtotal</p>
+                <span>$400.000</span>
+            </div>
+        
+            <div class="fila">
+                <p>Impuestos</p>
+                <span>$90.000</span>
+            </div>
+        
+            <div class="fila total">
+                <p>Total</p>
+                <span>$490.000</span>
+            </div>
+        
+            <button class="btn-pagar">Proceder al Pago</button>
+        </section>
     </main>
     <footer class="pieDePagina">
         <div>    
@@ -62,8 +96,10 @@
             <p>favoritos</p>
         </div>
         <div>
-            <img src="img/perfil.png" class="icono">
-            <p>perfil</p>
+            <a href="perfil.html">
+                <img src="img/perfil.png" class="icono">
+                <p>perfil</p>
+            </a>
         </div>        
     </footer>
 </body>
