@@ -1,0 +1,76 @@
+/* MOBILE FIRST (por defecto) */
+
+body {
+    font-size: 14px;
+}
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.productosDestacados {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+}
+
+.card {
+    width: 100%;
+}
+
+/* TABLET */
+@media (min-width: 768px) {
+
+    .menu {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contenedor-tarjetas {
+        justify-content: center;
+    }
+
+    .card {
+        width: 200px;
+    }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+    .menu {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .contenedor-tarjetas {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 220px;
+    }
+}
+@media (min-width: 768px){
+
+    .perfil-seccion{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .perfil, .cerrar-secion{
+        width: 200px;
+    }
+
+    .parte-perfil{
+        gap: 40px;
+    }
+}

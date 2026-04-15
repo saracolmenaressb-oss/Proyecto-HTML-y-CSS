@@ -23,7 +23,7 @@ main {
     display: flex;
     justify-content: space-around; /* mejor que gap + margin auto */
     align-items: center;
-    padding: 10px 0;
+    padding: 15px;
     
 }
 .pieDePagina div{
@@ -32,4 +32,60 @@ main {
 .encabezado img{
     width: 50px;
     height: 50px;
+}
+.encabezado{
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 🔥 centra todo */
+    position: relative;
+}
+.encabezado h1{
+    text-align: center;
+   margin: 0 auto;
+}
+.pieDePagina a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.historial{
+    width: 500px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* espacio ENTRE tarjetas */
+}
+/* perfil */
+.historial{
+    width: 500px;
+    margin: 15px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* espacio ENTRE tarjetas */
+}
+/* Catalogo */
+.contenedor{
+    width: 90%;
+    margin: 6rem auto 2rem;
+}
+/* carro */
+.carro{
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 120px; 
+}
+/* index */
+.menu{
+    display: flex;
+    gap: 1;
+    overflow-x: auto;
+    padding: 20px;
+}
+/* perfil */
+.perfil-seccion{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
 }

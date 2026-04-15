@@ -1,15 +1,15 @@
-body{
-    background: var(--color-fondo);
-}
+
 .catalogo{
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
-
+.main{
+    flex: 1;
+}
 .card img {
-    width: 160px;
-    height: 160px;
+     width: 100%;   
+    height: auto; 
     border-radius: 30px;
     margin: 0 auto;
     /* evita que la imagen se deforme */
@@ -21,8 +21,8 @@ body{
     display: flex;
     flex-direction:column;
     padding: 10px;
-    width: 220px;
-    min-height: 400px;
+    width: 90%; 
+    max-width: 300px;
     border: 1px solid darkslateblue;
     border-radius: 30px;
     transition: transform 0.3s ease;
@@ -30,6 +30,7 @@ body{
     box-shadow: 5px 5px 5px rgb(182, 177, 177);
     line-height: 1.0;
     padding-bottom: 15px; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .categoria {
     display: flex;
@@ -42,7 +43,7 @@ body{
 }
 .card h2{
     font-family: cursive;
-    font-size: 14px;  
+    font-size: 8px;  
     margin: 10px 0;
 }
 .categoria h2 {
@@ -66,15 +67,15 @@ body{
 }
 .contenedor-tarjetas {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas bajen si no hay espacio */
-    flex-direction: row; /* Asegura que vayan de izquierda a derecha */
-    gap: 1.5rem;
-    justify-content: space-evenly;
+    flex-direction: column; /* 🔥 IMPORTANTE en mobile */
+    gap: 1rem;
+    align-items: center;
 }
-.contenedor{
-    width: 90%;
-    margin: 6rem auto 2rem;
+.contenedor-tarjetas a{
+    text-decoration: none;
+    color: inherit;
 }
+
 .etiqueta{
     position: absolute;
     top: 5px;
@@ -89,6 +90,7 @@ body{
     width: 60px;
     height: 25px;
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 button{
     background: rgb(163, 150, 248);
@@ -111,7 +113,7 @@ button:hover{
     background: rgb(144, 150, 241);
     padding: 14px;
     text-align: center;
-    font-family: Arial, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -119,12 +121,6 @@ button:hover{
     margin: 0 auto;
     gap: 2;
     align-items: stretch;
-}
-.menu{
-    display: flex;
-    gap: 1;
-    overflow-x: auto;
-    padding: 20px;
 }
 .destacado{
     display: flex;
@@ -164,34 +160,24 @@ button:hover{
     height: 30px;
 }
 .buscador input{
-    width: 60rem;
+    width: 60%;
     border: 2px;
     height: 20px;
     border-radius: 30px;
     margin: 20px;
     padding: 15px;
     box-shadow: 5px 5px 10px rgb(182, 177, 177);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .titulo{
     text-align: center;
     color: darkslateblue;
     padding: 30px;
 }
-#piePagina{
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 20px;
-    
-}
+
 .icono{
     width: 30px;
     height: 30px;
-}
-.carro{
-    gap: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 120px; 
 }
 .carrito{
     width: 500px;
@@ -250,6 +236,7 @@ button:hover{
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .fila{
     display: flex;
@@ -273,10 +260,12 @@ button:hover{
     font-size: 16px;
     cursor: pointer;
     margin-top: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .btn-pagar:hover{
     background: rgb(40, 18, 182);
     transition: 0.3s;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .vacio{
     display: flex;                  /* Activamos Flexbox */
@@ -285,6 +274,7 @@ button:hover{
     align-items: center;            /* Centrado horizontal */
     min-height: 80vh;               /* Importante: Que ocupe casi toda la altura de la pantalla */
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .carrito-vacio-img {
@@ -297,6 +287,7 @@ button:hover{
     font-family: Arial, sans-serif;
     color: darkslateblue;
     font-size: 1.2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .perfil-foto{
@@ -315,16 +306,13 @@ button:hover{
 .info-usuario{
     text-align: center;
 }
-.perfil-seccion{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin: 0 auto; /* ⬅️ CENTRA */
-}
 .perfil{
     background: rgb(176, 186, 243);
-    width: 30rem;
-    height: 90px;
+    width: 60%;
+}
+.perfil a{
+    text-decoration: none;
+    color: inherit;
 }
 .perfil img{
     width: 35px;
@@ -345,68 +333,238 @@ button:hover{
     text-align: center;
     align-items: center;
     display: flex;
+    width: 90%;
+    max-width: 400px;
 }
 .cerrar-secion{
     color: red;
-    width: 30rem;
-    height: 90px;
+    width: 60%;
 }
 .cerrar-secion img{
     width: 35px;
     height: 35px;
 }
-.historial{
-    width: 500px;
+
+.pedido{
     background: rgb(176, 186, 243);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin: 15px auto;
     padding: 15px;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
+
 .fila-superior{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .fila-inferior{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .estado{
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 12px;
 }
+
 .detalle{
     background: #ddd;
     padding: 6px 12px;
     border-radius: 10px;
     cursor: pointer;
 }
+
 .entregado{
     background: #d4f5e9;
     color: #1f7a5c;
 }
+
 .total{
     font-weight: bold;
 }
+
 .referencia{
     font-size: 13px;
     color: gray;
 }
+
 .en-camino{
     background: #ffe7c7;
     color: #b26a00;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 14px;
 }
+
 .cancelado{
     background: #ffd6d6;
     color: #a10000;
+    padding: 2px 8px;
+    border-radius: 30px;
 }
-.perfil-seccion a{
-    text-decoration: none;
-    color: inherit;
+.resumen{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.pagar{
+    background: rgb(176, 186, 243);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* PRODUCTOS */
+.parte-pagar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* IMAGEN DEL PRODUCTO */
+.parte-pagar img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.checkout{
+    padding: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.checkout p{
+    margin-top: 10px;
+}
+
+.checkout input{
+    width: 100%; /* 🔥 CLAVE */
+    height: 35px;
+    border: 1px solid darkslateblue;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.checkout h2{
+    color: darkslateblue;
+    margin-top: 20px;
+    font-family: cursive;
+}
+
+/* MÉTODOS DE PAGO (en columna para móvil) */
+.metodos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* IMAGEN */
+.metodo img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.metodo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgb(176, 186, 243);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* imagen arriba, texto abajo */
+    align-items: center; /* centra horizontal */
+    text-align: center;
+
+}
+/* TEXTO */
+.info-check{
+    flex: 1;
+    font-size: 14px;
+}
+.resumen{
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.pagar{
+   background: rgb(176, 186, 243); /* tu paleta */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+
+/* PRODUCTOS */
+.parte-pagar{
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+
+}
+
+/* IMAGEN DEL PRODUCTO */
+
+.parte-pagar img{
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+
+/* TEXTO */
+.info-check{
+    flex: 1;
+    font-size: 14px;
+}
+
+/* PRECIO */
+.precio{
+    font-weight: bold;
+}
+/* PRECIO */
+.precio{
+    font-weight: bold;
+}
+
+.nombre{
+    font-weight: bold;
+}
+
+.cantidad-check{
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* PRECIO */
+.precio{
+    font-weight: bold;
+}
+
+/* TOTAL */
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* BOTÓN */
+.btn-pagar{
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: darkslateblue; /* tu color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }

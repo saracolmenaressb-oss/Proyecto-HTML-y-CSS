@@ -1,5 +1,6 @@
 :root{
     --color-fondo: rgb(226, 208, 255);
+    
 }
 body{
     margin: 0;
@@ -7,10 +8,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-.encabezado{
-    display: flex;
-    flex-direction: row;
+    padding-bottom: 90px;
 }
 
 * {
@@ -18,7 +16,6 @@ body{
     padding: 0;
     box-sizing: border-box;
 }
-.pieDePagina a{
-    text-decoration: none;
-    color: inherit;
-}
+
+
+
